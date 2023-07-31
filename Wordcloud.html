@@ -1,19 +1,30 @@
 <!DOCTYPE html>
-<meta charset="utf-8">
-<title>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>
     Never forget those who were lost
-</title>
+    </title>
+</head>
+<body>
 <!-- Load d3.js -->
 <script src="https://d3js.org/d3.v4.js"></script>
 
 <!-- Load d3-cloud -->
 <script src="https://cdn.jsdelivr.net/gh/holtzy/D3-graph-gallery@master/LIB/d3.layout.cloud.js"></script>
 
-<!-- Create a div where the graph will take place -->
+<h1>
+   Passenger Word Cloud
+</h1>
 <div id="my_dataviz"></div>
+<br>
+<div>
+   Wordcloud of some of the passengers who tragically perished in the Titanic incident.
+    The wordcloud serves as a touching memorial, honoring those who lost their lives during the ill-fated voyage.
+</div>
+<br>
 <script>
 
-// List of words
 
 
 d3.csv("https://raw.githubusercontent.com/datasciencedojo/datasets/master/titanic.csv", function(data) {
@@ -65,6 +76,8 @@ function draw(words) {
         .text(function(d) { return d.text; });
 }
 });
-document.getElementById("my_dataviz").insertAdjacentHTML("afterend",
-            "<a href='donught.html'>    Previous</a>");
+
 </script>
+<a href='donught.html'>Previous</a>
+</body>
+</html>
