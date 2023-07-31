@@ -38,7 +38,7 @@ d3.csv("https://github.com/datasciencedojo/datasets/blob/master/titanic.csv", fu
 
   // set the parameters for the histogram
   var histogram = d3.histogram()
-      .value(function(d) { return d.age; })   // I need to give the vector of value
+      .value(function(d) { return d.Age; })   // I need to give the vector of value
       .domain(x.domain())  // then the domain of the graphic
       .thresholds(x.ticks(70)); // then the numbers of bins
 
